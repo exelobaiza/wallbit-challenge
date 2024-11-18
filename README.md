@@ -1,65 +1,92 @@
-[![Wallbit](./assets/logo.jpg)](https://wallbit.io/)
+# checkout - wallbit challenge
 
-> El banco digital para trabajadores remotos.
+Este proyecto es una aplicación de carrito de compras desarrollada con Next.js y TypeScript. Permite a los usuarios agregar productos a un carrito, gestionar las cantidades y ver el total de la compra.
 
-# Wallbit Junior Frontend Challenge
+## Requisitos Previos
 
-Para este desafío, nuestro cliente nos encargó hacer un carrito de compras para programadores. Tiene un formulario con 2 campos: ID del producto y cantidad. Los programadores habitualmente no necesitan saber ni ver que productos comprar, sino que saben por conexiones astrales cual es el ID del producto que quieren y así los agregan a su carrito.
+Antes de comenzar, asegúrate de tener instalado:
 
-Cada vez que se agrega un producto, vamos a obtener el producto desde la API y lo vamos a mostrar en una tabla, junto a la cantidad que el usuario eligió.
+- Node.js (versión 14 o superior)
+- npm (normalmente viene con Node.js)
 
-> Solo lo mostramos visualmente por si hay alguien que no sea programador mirando la pantalla.
+## Instalación
 
-La aplicación se vería así:
+1. Clona este repositorio o descarga el código fuente.
+2. Abre una terminal y navega hasta el directorio del proyecto.
+3. Ejecuta el siguiente comando para instalar las dependencias:
 
-![Sin productos](./assets/app-0.jpg)
-> Inicialmente no hay productos en el carrito
+   ```
+   npm install
+   ```
 
-![Con productos](./assets/app-1.jpg)
-> Con productos en el carrito
+## Ejecución del Proyecto
 
-## Requisitos
+Para ejecutar el proyecto en modo de desarrollo, utiliza el siguiente comando:
 
-La API que nos dió nuestro cliente es: [Fake Store API](https://fakestoreapi.com/). El cliente nos dijo que su stack de frontend es React, que prefiere el challenge hecho con eso, pero está abierto a cualquier stack que quieras usar.
+```
+npm run dev
+```
 
-- [ ] Podemos agregar productos al carrito.
-- [ ] Manejar errores que nos devuelva la API.
-- [ ] Mostrar una lista con los productos agregados incluyendo `title`, `price` e `image` del producto y la `cantidad` que el usuario agregó.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-## Extras
+## Características Principales
 
-- [ ] El carrito se persiste al recargar la página.
-- [ ] Mostrar el total de productos agregados.
-- [ ] Mostrar el costo total del carrito.
-- [ ] Mostrar la fecha de creación del carrito.
+- Agregar productos al carrito mediante ID y cantidad
+- Vista previa de productos al ingresar el ID
+- Gestión de cantidades en el carrito
+- Cálculo automático del total de la compra
+- Diseño responsivo
+- Notificaciones toast para feedback al usuario
 
-## Bonus
+## Estructura del Proyecto
 
-Para destacar, podés agregar cualquier cosa que se te ocurra que llame la atención. No tiene por qué ser necesariamente en el código, o una dependencia. Puede ser algo visual, un easter egg, una funcionalidad, o bueno, algo en el código.
+```
+app/
+├── layout.tsx
+├── page.tsx
+├── components/
+│   ├── Header.tsx
+│   ├── ProductForm.tsx
+│   ├── CartList.tsx
+│   └── CartItem.tsx
+├── hooks/
+│   └── useCart.ts
+└── lib/
+    ├── types.ts
+    └── api.ts
+```
 
-> [!NOTE]
-> Siempre recordá que lo que agregues debe sumar a la experiencia del usuario y no complicar su navegación. Tenés que pensar que quien va a usar la aplicación no va a haber hablado con vos previamente y aun así debería poder usar la aplicación y obtener la mejor experiencia posible.
+## Tecnologías Utilizadas
 
-## Entregables
+- Next.js 13 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui (componentes de UI)
 
-- [ ] Crear un Pull Request a este repositorio con tu solución.
-- [ ] Reemplazar el `README.md` con instrucciones para correr el proyecto e información relevante para la evaluación.
-- [ ] Incluir el link al deploy de tu aplicación.
+## Consideraciones para la Evaluación
 
-## Premio
+1. **Arquitectura y Organización**: El proyecto está estructurado siguiendo las mejores prácticas de Next.js y React, con una clara separación de componentes, hooks y utilidades.
 
-Se va a entregar un premio en vivo durante [mi stream](https://twitch.tv/goncypozzo) el 19 de Noviembre de 2024 a las 19:00hs Argentina (GMT -3) entre todos los que completen el desafío. El premio va a ser un micrófono Razer Seiren Mini.
+2. **Uso de TypeScript**: Se han utilizado tipos e interfaces para garantizar la seguridad de tipos en toda la aplicación.
 
-El ganador va a ser elegido por el chat, la gente de Wallbit y yo.
+3. **Componentes Reutilizables**: Los componentes como CartItem y ProductForm están diseñados para ser reutilizables y mantener una única responsabilidad.
 
-> [!IMPORTANT]
-> El ganador debe estar presente en el stream para recibir el premio.
+4. **Estado Global**: Se utiliza un hook personalizado (useCart) para gestionar el estado del carrito, lo que facilita la escalabilidad y el mantenimiento.
 
-![Razer Seiren Mini](./assets/sorteo.jpg)
+5. **Diseño Responsivo**: La interfaz se adapta a diferentes tamaños de pantalla utilizando Tailwind CSS.
 
-> En caso de no poder enviarse el premio, se pagará el equivalente de 70 USD.
+6. **Manejo de Errores**: Se implementan validaciones y se muestran mensajes de error al usuario cuando es necesario.
 
-El deadline para enviar el PR es el 19 de Noviembre de 2024 a las 15:00hs Argentina (GMT -3).
+7. **Optimización de Rendimiento**: Se utilizan componentes del lado del servidor cuando es posible y se implementa la carga diferida de datos.
 
-> [!IMPORTANT]
-> Los PRs se cerrarán luego de esa hora así que no te olvides de hacerlo antes.
+8. **Accesibilidad**: Se han seguido las mejores prácticas de accesibilidad en los componentes de UI.
+
+9. **Pruebas**: Aunque no se incluyen en esta versión, el código está estructurado de manera que facilita la implementación de pruebas unitarias y de integración.
+
+10. **Documentación**: Este README proporciona una visión general del proyecto y las instrucciones necesarias para ejecutarlo.
+
+Para cualquier pregunta o aclaración adicional sobre el proyecto, no dudes en contactar al desarrollador.
+```
+
+Este README.md proporciona una visión general completa del proyecto, incluyendo instrucciones de instalación, ejecución y consideraciones importantes para la evaluación. ¿Hay algo más que te gustaría agregar o modificar en el README?
