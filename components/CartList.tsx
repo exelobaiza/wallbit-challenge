@@ -19,6 +19,14 @@ export function CartList({ cart, onUpdateQuantity, onRemoveFromCart }: CartListP
   const totalItems = cart.items.reduce((sum, item) => sum + item.quantity, 0)
   const totalCost = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
+  const formattedDate = new Date(cart.createdAt).toLocaleString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  })
+
   return (
     <Card className="bg-white shadow-sm border-0">
       <div className="p-6">
@@ -61,9 +69,13 @@ export function CartList({ cart, onUpdateQuantity, onRemoveFromCart }: CartListP
                 <span className="text-gray-600">Items</span>
                 <span className="font-medium">{totalItems}</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between mb-2">
                 <span className="text-gray-600">Total</span>
                 <span className="font-medium text-lg">${totalCost.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between text-sm text-gray-500 mt-4">
+                <span>Carrito creado el:</span>
+                <span>{formattedDate}</span>
               </div>
             </div>
           </>
