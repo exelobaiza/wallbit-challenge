@@ -74,7 +74,7 @@ export function CartList({ cart, onUpdateQuantity, onRemoveFromCart }: CartListP
                 <span className="font-medium text-lg">${totalCost.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-sm text-gray-500 mt-4">
-                <span>Carrito creado el:</span>
+                <span>Cart created by :</span>
                 <span>{formattedDate}</span>
               </div>
             </div>
