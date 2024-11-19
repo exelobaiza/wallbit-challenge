@@ -1,6 +1,6 @@
 # checkout - wallbit challenge
 
-[Link al deploy](https://wallbit-challenge-taupe.vercel.app/)
+[Link al deploy](https://wallbit-challenge-dusky.vercel.app/)
 
 
 Este proyecto es una aplicación de carrito de compras desarrollada con Next.js y TypeScript. Permite a los usuarios agregar productos a un carrito, gestionar las cantidades y ver el total de la compra.
