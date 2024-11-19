@@ -89,5 +89,5 @@ app/
 
 10. **Documentación**: Este README proporciona una visión general del proyecto y las instrucciones necesarias para ejecutarlo.
 
-Para cualquier pregunta o aclaración adicional sobre el proyecto, no dudes en contactar al desarrollador.
+Para cualquier pregunta o aclaración adicional sobre el proyecto, no dudes en contactarme.
 ```
